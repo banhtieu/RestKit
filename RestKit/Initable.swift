@@ -8,13 +8,13 @@
 
 import Foundation
 
-/**
-    make an item initable
-*/
+///
+/// make an item initable
+///
 public protocol Initable {
     
-    /**
-        required initialize method
-    */
+    ///
+    /// required initialize method
+    ///
     init()
 }

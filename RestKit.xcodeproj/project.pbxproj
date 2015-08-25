@@ -17,6 +17,15 @@
 		36CA83E21B8C13F400AAD56D /* InitableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83E11B8C13F400AAD56D /* InitableClass.swift */; };
 		36CA83E41B8C14B400AAD56D /* NotInitableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83E31B8C14B400AAD56D /* NotInitableClass.swift */; };
 		36CA83E71B8C194600AAD56D /* InitableStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83E61B8C194600AAD56D /* InitableStruct.swift */; };
+		36CA83E91B8C4B5F00AAD56D /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83E81B8C4B5F00AAD56D /* Serializable.swift */; };
+		36CA83EB1B8C4C6F00AAD56D /* NSObject+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83EA1B8C4C6F00AAD56D /* NSObject+Serializable.swift */; };
+		36CA83ED1B8C548900AAD56D /* SerializationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83EC1B8C548900AAD56D /* SerializationTest.swift */; };
+		36CA83EE1B8C54D000AAD56D /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83E81B8C4B5F00AAD56D /* Serializable.swift */; };
+		36CA83EF1B8C54D600AAD56D /* NSObject+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83EA1B8C4C6F00AAD56D /* NSObject+Serializable.swift */; };
+		36CA83F11B8C5A3400AAD56D /* Array+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F01B8C5A3400AAD56D /* Array+Serializable.swift */; };
+		36CA83F21B8C5A7F00AAD56D /* Array+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F01B8C5A3400AAD56D /* Array+Serializable.swift */; };
+		36CA83F41B8C5EAA00AAD56D /* BasicType+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */; };
+		36CA83F51B8C5F2A00AAD56D /* BasicType+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +50,11 @@
 		36CA83E11B8C13F400AAD56D /* InitableClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitableClass.swift; sourceTree = "<group>"; };
 		36CA83E31B8C14B400AAD56D /* NotInitableClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotInitableClass.swift; sourceTree = "<group>"; };
 		36CA83E61B8C194600AAD56D /* InitableStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitableStruct.swift; sourceTree = "<group>"; };
+		36CA83E81B8C4B5F00AAD56D /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		36CA83EA1B8C4C6F00AAD56D /* NSObject+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Serializable.swift"; sourceTree = "<group>"; };
+		36CA83EC1B8C548900AAD56D /* SerializationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationTest.swift; sourceTree = "<group>"; };
+		36CA83F01B8C5A3400AAD56D /* Array+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Serializable.swift"; sourceTree = "<group>"; };
+		36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicType+Serializable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +97,12 @@
 		36CA83C11B8C108B00AAD56D /* RestKit */ = {
 			isa = PBXGroup;
 			children = (
+				36CA83F61B8C643700AAD56D /* Serializable */,
 				36CA83C21B8C108B00AAD56D /* RestKit.h */,
 				36CA83C41B8C108B00AAD56D /* Info.plist */,
 				36CA83D91B8C10AC00AAD56D /* Factory.swift */,
 				36CA83DB1B8C12F500AAD56D /* Initable.swift */,
+				36CA83E81B8C4B5F00AAD56D /* Serializable.swift */,
 			);
 			path = RestKit;
 			sourceTree = "<group>";
@@ -97,6 +113,7 @@
 				36CA83E51B8C193100AAD56D /* Classes */,
 				36CA83D01B8C108B00AAD56D /* Info.plist */,
 				36CA83DD1B8C13A700AAD56D /* FactoryTest.swift */,
+				36CA83EC1B8C548900AAD56D /* SerializationTest.swift */,
 			);
 			path = RestKitTests;
 			sourceTree = "<group>";
@@ -109,6 +126,16 @@
 				36CA83E61B8C194600AAD56D /* InitableStruct.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		36CA83F61B8C643700AAD56D /* Serializable */ = {
+			isa = PBXGroup;
+			children = (
+				36CA83EA1B8C4C6F00AAD56D /* NSObject+Serializable.swift */,
+				36CA83F01B8C5A3400AAD56D /* Array+Serializable.swift */,
+				36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */,
+			);
+			name = Serializable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CA83F21B8C5A7F00AAD56D /* Array+Serializable.swift in Sources */,
+				36CA83F41B8C5EAA00AAD56D /* BasicType+Serializable.swift in Sources */,
+				36CA83EB1B8C4C6F00AAD56D /* NSObject+Serializable.swift in Sources */,
+				36CA83E91B8C4B5F00AAD56D /* Serializable.swift in Sources */,
 				36CA83DA1B8C10AC00AAD56D /* Factory.swift in Sources */,
 				36CA83DC1B8C12F500AAD56D /* Initable.swift in Sources */,
 			);
@@ -228,9 +259,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CA83F11B8C5A3400AAD56D /* Array+Serializable.swift in Sources */,
+				36CA83EF1B8C54D600AAD56D /* NSObject+Serializable.swift in Sources */,
 				36CA83E71B8C194600AAD56D /* InitableStruct.swift in Sources */,
 				36CA83E01B8C13D700AAD56D /* Factory.swift in Sources */,
 				36CA83DF1B8C13D400AAD56D /* Initable.swift in Sources */,
+				36CA83ED1B8C548900AAD56D /* SerializationTest.swift in Sources */,
+				36CA83F51B8C5F2A00AAD56D /* BasicType+Serializable.swift in Sources */,
+				36CA83EE1B8C54D000AAD56D /* Serializable.swift in Sources */,
 				36CA83E41B8C14B400AAD56D /* NotInitableClass.swift in Sources */,
 				36CA83E21B8C13F400AAD56D /* InitableClass.swift in Sources */,
 				36CA83DE1B8C13A700AAD56D /* FactoryTest.swift in Sources */,

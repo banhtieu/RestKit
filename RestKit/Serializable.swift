@@ -27,7 +27,7 @@ enum SerializingError: ErrorType {
 /// the ability to initialize 
 /// and set value from a dictionary
 ///
-public protocol Serializable {
+public protocol Serializable: Initable {
     
     ///
     /// set value

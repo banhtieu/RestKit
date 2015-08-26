@@ -10,7 +10,7 @@ import Foundation
 
 
 /// extension for all basic types
-extension String: Serializable, Initable {
+extension String: Serializable {
     
     ///
     /// deserialize an object to string
@@ -21,7 +21,7 @@ extension String: Serializable, Initable {
 }
 
 /// extension for Int
-extension Int: Serializable, Initable {
+extension Int: Serializable {
     
     ///
     /// deserialize for integer
@@ -35,7 +35,7 @@ extension Int: Serializable, Initable {
 }
 
 /// extension for Bool
-extension Bool: Serializable, Initable {
+extension Bool: Serializable {
     public mutating func deserialize(data: AnyObject) throws {
         if let boolValue = data as? Bool {
             self = boolValue
@@ -46,7 +46,7 @@ extension Bool: Serializable, Initable {
 }
 
 /// extension for Bool
-extension Float: Serializable, Initable {
+extension Float: Serializable {
     public mutating func deserialize(data: AnyObject) throws {
         if let floatValue = data as? Float {
             self = floatValue
@@ -57,7 +57,7 @@ extension Float: Serializable, Initable {
 }
 
 /// extension for Bool
-extension Double: Serializable, Initable {
+extension Double: Serializable {
     public mutating func deserialize(data: AnyObject) throws {
         if let doubleValue = data as? Double {
             self = doubleValue

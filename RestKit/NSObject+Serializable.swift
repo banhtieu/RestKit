@@ -11,7 +11,7 @@ import Foundation
 ///
 /// Serializable support for NSObject
 ///
-extension NSObject: Serializable, Initable {
+extension NSObject: Serializable {
     
     ///
     /// deserialize an NSObject from 

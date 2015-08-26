@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		367DA7111B8D4CF0008A7C76 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DA7101B8D4CF0008A7C76 /* Request.swift */; };
+		367DA7131B8D4E80008A7C76 /* RestKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DA7121B8D4E80008A7C76 /* RestKit.swift */; };
 		36CA83C31B8C108B00AAD56D /* RestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 36CA83C21B8C108B00AAD56D /* RestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36CA83CA1B8C108B00AAD56D /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA83BF1B8C108B00AAD56D /* RestKit.framework */; };
 		36CA83DA1B8C10AC00AAD56D /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83D91B8C10AC00AAD56D /* Factory.swift */; };
@@ -26,6 +28,8 @@
 		36CA83F21B8C5A7F00AAD56D /* Array+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F01B8C5A3400AAD56D /* Array+Serializable.swift */; };
 		36CA83F41B8C5EAA00AAD56D /* BasicType+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */; };
 		36CA83F51B8C5F2A00AAD56D /* BasicType+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */; };
+		36CA83F81B8C67F400AAD56D /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F71B8C67F400AAD56D /* RequestSerializer.swift */; };
+		36CA83F91B8C68F400AAD56D /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83F71B8C67F400AAD56D /* RequestSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		367DA7101B8D4CF0008A7C76 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		367DA7121B8D4E80008A7C76 /* RestKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestKit.swift; sourceTree = "<group>"; };
 		36CA83BF1B8C108B00AAD56D /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36CA83C21B8C108B00AAD56D /* RestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestKit.h; sourceTree = "<group>"; };
 		36CA83C41B8C108B00AAD56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +61,7 @@
 		36CA83EC1B8C548900AAD56D /* SerializationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationTest.swift; sourceTree = "<group>"; };
 		36CA83F01B8C5A3400AAD56D /* Array+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Serializable.swift"; sourceTree = "<group>"; };
 		36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicType+Serializable.swift"; sourceTree = "<group>"; };
+		36CA83F71B8C67F400AAD56D /* RequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +104,16 @@
 		36CA83C11B8C108B00AAD56D /* RestKit */ = {
 			isa = PBXGroup;
 			children = (
+				36CA83FA1B8C798700AAD56D /* Serializer */,
 				36CA83F61B8C643700AAD56D /* Serializable */,
 				36CA83C21B8C108B00AAD56D /* RestKit.h */,
 				36CA83C41B8C108B00AAD56D /* Info.plist */,
 				36CA83D91B8C10AC00AAD56D /* Factory.swift */,
 				36CA83DB1B8C12F500AAD56D /* Initable.swift */,
 				36CA83E81B8C4B5F00AAD56D /* Serializable.swift */,
+				36CA83F71B8C67F400AAD56D /* RequestSerializer.swift */,
+				367DA7101B8D4CF0008A7C76 /* Request.swift */,
+				367DA7121B8D4E80008A7C76 /* RestKit.swift */,
 			);
 			path = RestKit;
 			sourceTree = "<group>";
@@ -136,6 +147,13 @@
 				36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */,
 			);
 			name = Serializable;
+			sourceTree = "<group>";
+		};
+		36CA83FA1B8C798700AAD56D /* Serializer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Serializer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +270,9 @@
 				36CA83E91B8C4B5F00AAD56D /* Serializable.swift in Sources */,
 				36CA83DA1B8C10AC00AAD56D /* Factory.swift in Sources */,
 				36CA83DC1B8C12F500AAD56D /* Initable.swift in Sources */,
+				367DA7131B8D4E80008A7C76 /* RestKit.swift in Sources */,
+				36CA83F81B8C67F400AAD56D /* RequestSerializer.swift in Sources */,
+				367DA7111B8D4CF0008A7C76 /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +289,7 @@
 				36CA83F51B8C5F2A00AAD56D /* BasicType+Serializable.swift in Sources */,
 				36CA83EE1B8C54D000AAD56D /* Serializable.swift in Sources */,
 				36CA83E41B8C14B400AAD56D /* NotInitableClass.swift in Sources */,
+				36CA83F91B8C68F400AAD56D /* RequestSerializer.swift in Sources */,
 				36CA83E21B8C13F400AAD56D /* InitableClass.swift in Sources */,
 				36CA83DE1B8C13A700AAD56D /* FactoryTest.swift in Sources */,
 			);
@@ -447,6 +469,7 @@
 				36CA83D51B8C108B00AAD56D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36CA83D61B8C108B00AAD56D /* Build configuration list for PBXNativeTarget "RestKitTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +478,7 @@
 				36CA83D81B8C108B00AAD56D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

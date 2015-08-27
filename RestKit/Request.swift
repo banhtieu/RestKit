@@ -23,6 +23,14 @@ public enum HttpMethod: String {
 }
 
 ///
+/// encode the request
+///
+public enum Encoding {
+    case Url
+    case Json
+}
+
+///
 /// the client
 public protocol HttpClient {
     func execute(request: Request)
@@ -46,7 +54,7 @@ public class Request {
 
     ///
     /// list of query parameters
-    public var parameters: Any?
+    public var parameters: AnyObject
     
     ///
     /// the attachment
@@ -55,6 +63,10 @@ public class Request {
     ///
     /// the client 
     public var client: HttpClient?
+    
+    ///
+    /// how the data is encoded
+    public var encoding = Encoding.Url
 
     ///
     /// request is OK
@@ -143,7 +155,7 @@ public class Request {
     /// handle when text is returned
     /// 
     /// param
-    public func onRequestOK(handler: (text: String) -> Void) -> Request {
+    public func onOK(handler: (text: String) -> Void) -> Request {
         
         okHandler = {
             response, data in
@@ -162,7 +174,7 @@ public class Request {
     /// - parameter handler: the handler
     /// - returns: this object for convinience
     ///
-    public func onRequestOK<T: Serializable>(handler: (data: T) -> Void) -> Request {
+    public func onOK<T: Serializable>(handler: (data: T) -> Void) -> Request {
         
         okHandler = {
             response, data in
@@ -186,7 +198,7 @@ public class Request {
     /// get NSData back
     /// - parameter handler: the data handler
     /// - returns: this object for convinience
-    public func onRequestOK(handler: (data: NSData) -> Void) -> Request {
+    public func onOK(handler: (data: NSData) -> Void) -> Request {
         okHandler = {
             response, data in
             handler(data: data)
@@ -195,5 +207,15 @@ public class Request {
         return self
     }
     
+    ///
+    /// Request has error
+    ///
+    /// - parameter handler: the handler for error
+    /// - returns: the object
+    public func onError(handler: (error: ErrorType) -> Void) -> Request {
+        errorHandler = handler
+        
+        return self
+    }
     
 }

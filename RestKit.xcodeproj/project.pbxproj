@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		367DA7111B8D4CF0008A7C76 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DA7101B8D4CF0008A7C76 /* Request.swift */; };
 		367DA7131B8D4E80008A7C76 /* RestKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DA7121B8D4E80008A7C76 /* RestKit.swift */; };
+		369EFEA91B8EC6980053B66C /* DefaultRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EFEA81B8EC6980053B66C /* DefaultRequestSerializer.swift */; settings = {ASSET_TAGS = (); }; };
+		369EFEAA1B8EC9C10053B66C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DA7101B8D4CF0008A7C76 /* Request.swift */; settings = {ASSET_TAGS = (); }; };
+		369EFEAB1B8EC9C60053B66C /* RestKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DA7121B8D4E80008A7C76 /* RestKit.swift */; settings = {ASSET_TAGS = (); }; };
+		369EFEAC1B8EC9CA0053B66C /* DefaultRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EFEA81B8EC6980053B66C /* DefaultRequestSerializer.swift */; settings = {ASSET_TAGS = (); }; };
 		36CA83C31B8C108B00AAD56D /* RestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 36CA83C21B8C108B00AAD56D /* RestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36CA83CA1B8C108B00AAD56D /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA83BF1B8C108B00AAD56D /* RestKit.framework */; };
 		36CA83DA1B8C10AC00AAD56D /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA83D91B8C10AC00AAD56D /* Factory.swift */; };
@@ -45,6 +49,7 @@
 /* Begin PBXFileReference section */
 		367DA7101B8D4CF0008A7C76 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		367DA7121B8D4E80008A7C76 /* RestKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestKit.swift; sourceTree = "<group>"; };
+		369EFEA81B8EC6980053B66C /* DefaultRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRequestSerializer.swift; sourceTree = "<group>"; };
 		36CA83BF1B8C108B00AAD56D /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36CA83C21B8C108B00AAD56D /* RestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestKit.h; sourceTree = "<group>"; };
 		36CA83C41B8C108B00AAD56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,9 +114,6 @@
 				36CA83C21B8C108B00AAD56D /* RestKit.h */,
 				36CA83C41B8C108B00AAD56D /* Info.plist */,
 				36CA83D91B8C10AC00AAD56D /* Factory.swift */,
-				36CA83DB1B8C12F500AAD56D /* Initable.swift */,
-				36CA83E81B8C4B5F00AAD56D /* Serializable.swift */,
-				36CA83F71B8C67F400AAD56D /* RequestSerializer.swift */,
 				367DA7101B8D4CF0008A7C76 /* Request.swift */,
 				367DA7121B8D4E80008A7C76 /* RestKit.swift */,
 			);
@@ -142,6 +144,8 @@
 		36CA83F61B8C643700AAD56D /* Serializable */ = {
 			isa = PBXGroup;
 			children = (
+				36CA83DB1B8C12F500AAD56D /* Initable.swift */,
+				36CA83E81B8C4B5F00AAD56D /* Serializable.swift */,
 				36CA83EA1B8C4C6F00AAD56D /* NSObject+Serializable.swift */,
 				36CA83F01B8C5A3400AAD56D /* Array+Serializable.swift */,
 				36CA83F31B8C5EAA00AAD56D /* BasicType+Serializable.swift */,
@@ -152,6 +156,8 @@
 		36CA83FA1B8C798700AAD56D /* Serializer */ = {
 			isa = PBXGroup;
 			children = (
+				36CA83F71B8C67F400AAD56D /* RequestSerializer.swift */,
+				369EFEA81B8EC6980053B66C /* DefaultRequestSerializer.swift */,
 			);
 			name = Serializer;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 				36CA83F21B8C5A7F00AAD56D /* Array+Serializable.swift in Sources */,
 				36CA83F41B8C5EAA00AAD56D /* BasicType+Serializable.swift in Sources */,
 				36CA83EB1B8C4C6F00AAD56D /* NSObject+Serializable.swift in Sources */,
+				369EFEA91B8EC6980053B66C /* DefaultRequestSerializer.swift in Sources */,
 				36CA83E91B8C4B5F00AAD56D /* Serializable.swift in Sources */,
 				36CA83DA1B8C10AC00AAD56D /* Factory.swift in Sources */,
 				36CA83DC1B8C12F500AAD56D /* Initable.swift in Sources */,
@@ -280,7 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369EFEAB1B8EC9C60053B66C /* RestKit.swift in Sources */,
 				36CA83F11B8C5A3400AAD56D /* Array+Serializable.swift in Sources */,
+				369EFEAA1B8EC9C10053B66C /* Request.swift in Sources */,
+				369EFEAC1B8EC9CA0053B66C /* DefaultRequestSerializer.swift in Sources */,
 				36CA83EF1B8C54D600AAD56D /* NSObject+Serializable.swift in Sources */,
 				36CA83E71B8C194600AAD56D /* InitableStruct.swift in Sources */,
 				36CA83E01B8C13D700AAD56D /* Factory.swift in Sources */,

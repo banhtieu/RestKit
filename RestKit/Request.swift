@@ -54,7 +54,7 @@ public class Request {
 
     ///
     /// list of query parameters
-    public var parameters: AnyObject
+    public var parameters: AnyObject?
     
     ///
     /// the attachment
@@ -77,6 +77,10 @@ public class Request {
     public var errorHandler: ((error: ErrorType) -> Void)?
     
     ///
+    /// the task of this request
+    public var task: NSURLSessionDataTask?
+    
+    ///
     /// initialize the object
     public init() {
         
@@ -86,7 +90,7 @@ public class Request {
     /// set all parameters
     /// - parameter parameters: array of parameters
     /// - returns: this object for convinience
-    public func setParameters(parameters: [String: Any]) -> Request {
+    public func setParameters(parameters: [String: AnyObject]) -> Request {
         self.parameters = parameters
         
         return self

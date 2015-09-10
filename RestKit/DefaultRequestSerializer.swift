@@ -50,7 +50,8 @@ public class DefaultRequestSerializer: RequestSerializer {
                 let encodedParameters = encodeParameters(data.parameters)
                 request.HTTPBody = encodedParameters?.dataUsingEncoding(NSUTF8StringEncoding)
             } else if data.encoding == Encoding.Json {
-                if let bodyAsJson = try? NSJSONSerialization.dataWithJSONObject(data.parameters, options: []) {
+                if let parameters = data.parameters,
+                    let bodyAsJson = try? NSJSONSerialization.dataWithJSONObject(parameters, options: []) {
                     
                     request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
                     request.HTTPBody = bodyAsJson
